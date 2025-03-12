@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/basicMaths",
+                "${workspaceFolder}/recurssion",
+                "${workspaceFolder}/array",
+                "${workspaceFolder}/2ptr"
+
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc.exe"
+        }
+    ],
+    "version": 4
+}

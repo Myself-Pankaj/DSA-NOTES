@@ -1,0 +1,118 @@
+
+{
+    "breadcrumbs.enabled": false,
+    "C_Cpp.clang_format_path": "C:\\Program Files\\LLVM\\bin\\clang-format.exe",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.default.intelliSenseMode": "msvc-x64",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/basicMaths",
+        "${workspaceFolder}/recurssion",
+        "${workspaceFolder}/array/**",
+        "${workspaceFolder}/2ptr"
+    ],
+    "C_Cpp.updateChannel": "Insiders",
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.intelliSenseCacheSize": 5120,
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 120 }",
+    "code-runner.customCommand": "cd $dir && cf-test $fileName",
+    "code-runner.executorMap": {
+        "c": "cd $dir && gcc -g -static -std=gnu11 -lm -Wfatal-errors $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ -std=c++17 -static -Wall -Wextra -Wno-unknown-pragmas -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wlogical-op -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fstack-protector $fileName -o $fileNameWithoutExt && Get-Content input.txt | ./$fileNameWithoutExt | Set-Content output.txt",
+        "python": "cd $dir && py $fileName"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.formatOnSave": true
+    },
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.formatOnSave": true
+    },
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoIndent": "full",
+    "editor.find.autoFindInSelection": true,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 120,
+    "explorer.autoReveal": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "python.formatting.provider": "yapf",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        }
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.panel.defaultLocation": "right",
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "git.autofetch": true,
+    "window.zoomLevel": -1,
+    "workbench.iconTheme": "material-icon-theme",
+    "files.autoSave": "onFocusChange",
+    "workbench.preferredLightColorTheme": "Default Light+",
+    "files.associations": {
+        "iostream": "cpp",
+        "vector": "cpp",
+        "array": "cpp",
+        "atomic": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp",
+        "fstream": "cpp",
+        "future": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "thread": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "*.tcc": "cpp",
+        "functional": "cpp",
+        "memory": "cpp",
+        "algorithm": "cpp",
+        "random": "cpp",
+        "limits": "cpp",
+        "numeric": "cpp",
+        "queue": "cpp",
+        "stack": "cpp",
+        "map": "cpp",
+        "set": "cpp"
+    }
+}
