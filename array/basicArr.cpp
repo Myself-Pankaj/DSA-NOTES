@@ -96,7 +96,7 @@ class basicArr{
     }
     vector<int> rearrangeArray(vector<int>& nums) {
         int n = nums.size();
-        vector<int>posArr;// 3 1 2
+        vector<int>posArr;// 3 1 2 
         vector<int>negArr;//-2,-5,-4
         for(int i = 0 ;i<n;i++){
             if(nums[i]<0){

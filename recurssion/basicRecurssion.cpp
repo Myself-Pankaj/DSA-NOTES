@@ -1,8 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
 class basicRecurssion{
     public:
     void print_name_n_time(int n){
         if(n == 0) return;
-
         cout<<"Pankaj\n";
 
         print_name_n_time(n-1);
@@ -44,5 +45,41 @@ class basicRecurssion{
         if(n==2) return 2;
 
         return fibobacchi(n-1)+fibobacchi(n-2);
+    }
+    int  adddigit(int n ){
+        if(n == 0 ) return 0;
+
+        int sum = n%10;
+        return adddigit(n/10)+sum;
+
+
+    }
+    // void revStack(stack<int>& st){
+    //     if(st.empty()){
+    //         return;
+    //     }
+    //     int top = st.top();
+    //     st.pop();
+        
+    //     revStack(st);
+    // }
+
+    void arrsum(int index, vector<int>& arr,int &sum,int n){
+        if(index == n){
+            return;
+        }
+        //15
+        sum+=arr[index];
+        arrsum(index+1,arr,sum,n);
+        
+    }
+    int countGoodNumbers(long long n) {
+        if(n == 0) return 1;
+        if(n == 1) return 5;
+        if(n%2 ==0){
+            return countGoodNumbers(n-2)*20;
+        }else{
+            return countGoodNumbers(n-1)*5;
+        }
     }
 };

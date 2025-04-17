@@ -59,7 +59,8 @@ class MissingNumber{
         // n(n+1)/2 9-6 =3
         
         unordered_map<int,int>mpp;
-        for(int i = 0 ; i<arr.size();i++){
+        int n =arr.size();
+        for(int i = 0 ; i<n;i++){
             mpp[arr[i]]++;
         }
         int repeatedNo = 0;
@@ -68,7 +69,7 @@ class MissingNumber{
                 repeatedNo = it.first;
             }
         }
-        int n =arr.size();
+        
         int summision = (n*(n+1))/2;
         cout<<summision<<endl;
         int sum = 0;
