@@ -20,12 +20,10 @@ class MinWindow{
             }
             j++;
             while(required ==0){
-                
-                    if(j-i<mini){
-                        mini = j-i;
-                        start = i;
-                    }
-                
+                if(j-i<mini){
+                    mini = j-i;
+                    start = i;
+                }
                 if(freqt[s[i]] >0){
                     freqs[s[i]]--;
                     if(freqs[s[i]]<freqt[s[i]]) required++;

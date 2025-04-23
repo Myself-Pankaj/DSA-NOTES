@@ -86,45 +86,52 @@ using namespace std;
 // { class validP}
 #include "greedy/candy.cpp"
 //{class DistributeCandy}
+#include "linklist/SLL/arraytoLL.cpp"
+//{class AtoLL}
+#include "linklist/DLL/arraytoDLL.cpp"
+//{class AtoDLL}
+#include "linklist/DLL/operationonDLL.cpp"
+//{class operationOnLL}
+#include "linklist/SLL/operationonLL.cpp"
+//{class operationOnLL}
+#include "linklist/SLL/addtwoll.cpp"
+//{class addTwoLL}
 
 
-vector<vector<int>> merge(vector<vector<int>>& arr) {
-     int n = arr.size();  
-     vector<vector<int>> res;
-     sort(arr.begin(),arr.end(),[](const vector<int>& a, const vector<int>& b){
-        return a[1]< b[1];
-     });
-    res.push_back(arr[0]);
-    for (int i = 1; i < n; i++)
-    {
-        /* code */
-        if(res.back()[1]> arr[i][0]){
-            if(arr[i][0]<res.back()[0]){
-                res.back()[0] = arr[i][0];
-            }
-            if(res.back()[1]<arr[i][1]){
-                res.back()[1] = arr[i][1];
-            }
-        }else{
-            res.push_back(arr[i]);
-        }
-    }
-    
-     return res;
-   
-    
-}
+
+
     int main() {
         
-        vector<vector<int>> intervals = {{2,3},
-    {4,5},{6,7},{8,9},{1,10}};
-      
-        vector<vector<int>> ans = merge(intervals);
-        for(auto it: ans){
-            for(auto i:it){
-                cout<<i<<" ";
-            }
-            cout<<endl;
+        
+        vector<int>arr;
+        int n;
+        cin>>n;
+        for (int i = 0; i < n; i++)
+        {
+            /* code */
+            int ele;
+            cin>>ele;
+            arr.push_back(ele);
         }
+        vector<int>arr1;
+        int m;
+        cin>>m;
+        for (int i = 0; i < m; i++)
+        {
+            /* code */
+            int ele;
+            cin>>ele;
+            arr1.push_back(ele);
+        }
+        AtoLL l1;
+        Node*h1= l1.convertAtoLL(arr);
+        Node*h2= l1.convertAtoLL(arr1);
+
+        addTwoLL l2;
+        
+        Node*newhead = l2.add2ll(h1,h2);
+        l1.PintLL(newhead);
+    
+
         return 0;
     }

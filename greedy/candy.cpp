@@ -4,7 +4,7 @@ using namespace std;
 class DistributeCandy{
     public:
     int minCandyDistribution(vector<int>&child){
-        int min_candy = 0;
+    
         int n = child.size();
         vector<int>temp1;
         int ctr = 1;
