@@ -4,9 +4,10 @@ using namespace std;
 class StringHashing{
     public:
     bool isAnagram(string s, string t) {
+        int n = s.length();
         if(s.length()!=t.length()) return false;
         unordered_map<char,int>mpp;
-        for(int i = 0 ;i<s.length();i++){
+        for(int i = 0 ;i<n;i++){
             mpp[s[i]] ++;
         }
         for(auto it: t){
@@ -27,7 +28,8 @@ class StringHashing{
         }
         unordered_map<char,int>mpp;
         unordered_map<char,int>mpp2;
-        for(int i = 0 ; i<s.length();i++){
+        int n = s.length();
+        for(int i = 0 ; i<n;i++){
             mpp[s[i]]++;
             mpp2[t[i]]++;
         }

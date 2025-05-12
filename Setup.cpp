@@ -96,42 +96,124 @@ using namespace std;
 //{class operationOnLL}
 #include "linklist/SLL/addtwoll.cpp"
 //{class addTwoLL}
-
-
-
-
+#include "linklist/SLL/oddevenll.cpp"
+//{class OddEvenLL}
+#include "linklist/SLL/isllpalindrome.cpp"
+//{class isListPalindrome}
+#include "linklist/SLL/findintersection.cpp"
+//{class FindIntersection}
+#include "linklist/SLL/slowFastAlgo.cpp"
+//{class SlowFast}
+#include "linklist/DLL/deleteOccurence.cpp"
+//{class DeleteOccurence}
+#include "linklist/DLL/findpair.cpp"
+//{class FindPair}
+#include "linklist/DLL/removeDuplicates.cpp"
+//{class RemoveDuplicate}
+#include "linklist/operationonflatenlist.cpp"
+// {class AtoFLL,mainFun}
+#include "linklist/SLL/rotateaLL.cpp"
+//{class Rotate}
+#include "linklist/SLL/sortall.cpp"
+//{class SortLL}
+#include "linklist/SLL/reverseingroupk.cpp"
+// {class ReversingInKGroup  //tip Not completed}
+#include "stack&queue/DS/arrtostack.cpp"
+// {class Stack}
+#include "stack&queue/DS/arrtoqueue.cpp"
+//{class Queue}
+#include "stack&queue/DS/lltostack.cpp"
+//{class LLStack}
+#include "stack&queue/DS/lltoqueue.cpp"
+//{class LLQueue}
+#include "stack&queue/DS/stacktoqueue.cpp"
+//{class STOQ}
+#include "stack&queue/DS/queuetostack.cpp"
+//{class QTOS}
+#include "stack&queue/ArithmeticOperation/infixtopostfix.cpp"
+// {class InfixToPostfix}
+#include "stack&queue/ArithmeticOperation/infixtoprefix.cpp"
+// {class InfixToPretfix}
+#include "stack&queue/validparenthesis.cpp"
+// {class CheckValidParenthesis}
+#include "stack&queue/nge.cpp"
+// {class NGE}
+#include "stack&queue/nextSmallerElelement.cpp"
+// {class NextSmallerElement}
+#include "stack&queue/trappingRainwater.cpp"
+// {class TrapRainwater}
+#include "stack&queue/sumofsubarraymin.cpp"
+// {class sumofsubarraymin}
+#include "stack&queue/astoriodCollision.cpp"
+// {class astoriodCollision}
+#include "stack&queue/sumofsubarrayrange.cpp"
+// {class SubarrayRange}
+#include "stack&queue/removekdigit.cpp"
+// {class RemoveKDigit}
+#include "stack&queue/largestRectangleinHistogram.cpp"
+// {class LargestRectangle}
+#include "stack&queue/maximalRectangle.cpp"
+// {class MaximalRectangle}
+#include "stack&queue/slidingWindowMaximal.cpp"
+// {class SlidingWindowMax}
+#include "stack&queue/stockSpanner.cpp"
+// {class StockSpanner}
+#include "stack&queue/celebrityProblem.cpp"
+// {class Celebrity}
+#include "stack&queue/LRUCache.cpp"
+// {class LRUCache}
+#include "stack&queue/LFUCache.cpp"
+// {class LFUCache}
     int main() {
-        
-        
-        vector<int>arr;
-        int n;
-        cin>>n;
-        for (int i = 0; i < n; i++)
-        {
-            /* code */
-            int ele;
-            cin>>ele;
-            arr.push_back(ele);
-        }
-        vector<int>arr1;
-        int m;
-        cin>>m;
-        for (int i = 0; i < m; i++)
-        {
-            /* code */
-            int ele;
-            cin>>ele;
-            arr1.push_back(ele);
-        }
-        AtoLL l1;
-        Node*h1= l1.convertAtoLL(arr);
-        Node*h2= l1.convertAtoLL(arr1);
+        // vector<int>arr;
+        // int n;cin>>n;
+        // for (int i = 0; i < n; i++)
+        // {
+        //     /* code */
+        //     int ele;
+        //     cin>>ele;
+        //     arr.push_back(ele);
+        // }
+        LFUCache l1(2);
+        l1.put(1,1);
+        l1.put(2,2);
+        cout<<l1.get(1)<<endl;
+        l1.put(3,3);
+        cout<<l1.get(2)<<endl;
+        cout<<l1.get(3)<<endl;
+        l1.put(4,4);
+        l1.put(5,5);
+        cout<<l1.get(5)<<endl;
+        cout<<l1.get(1)<<endl;
+        cout<<l1.get(3)<<endl;
+        l1.put(6,6);
+        cout<<l1.get(5)<<endl;
+        l1.put(7,7);
+        cout<<l1.get(4)<<endl;
 
-        addTwoLL l2;
         
-        Node*newhead = l2.add2ll(h1,h2);
-        l1.PintLL(newhead);
+
+
+        
+        // int n,m;
+        // cin>>n>>m;
+        // vector<vector<int>> mat(n);
+        // for(int i = 0 ;i<n;i++){
+        //     for(int j = 0 ; j<m;j++){
+        //         int ele;
+        //         cin>>ele;
+        //         mat[i].push_back(ele);
+        //     }
+        // }
+        
+        // Celebrity c1;
+        // cout<<c1.celebrityOptimal(mat);
     
-
+        // for(auto it: mat){
+        //     for(char ele:it){
+        //         cout<<ele<<" ";
+        //     }
+        //     cout<<endl;
+        // }
         return 0;
     }

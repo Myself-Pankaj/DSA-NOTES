@@ -8,10 +8,10 @@ class NiceSubarray{
         int i = 0,j=0;
         while(j<n){
             if(k<0) return 0;
-            if(nums[j] & 1 == 1)oddCount++;
+            if((nums[j] & 1) == 1)oddCount++;
 
             while(oddCount>k){
-                if(nums[i] & 1 == 1) oddCount--;
+                if((nums[i] & 1 )== 1) oddCount--;
                 i++;
             }
             if(oddCount <=k){

@@ -67,9 +67,9 @@ class validP{
         return res;
     }
     string removeOuterParenthesesOptimal(string s) {
-        int count = 0;
+        int count = 0;int n = s.length();
         string ans = "";
-        for (int i = 0; i<s.length();i++)
+        for (int i = 0; i<n;i++)
         {
             if(s[i]==')') count--;
             if(count!=0) ans.push_back(s[i]);

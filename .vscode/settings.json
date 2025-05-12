@@ -114,6 +114,7 @@
         "stack": "cpp",
         "map": "cpp",
         "set": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "stdexcept": "cpp"
     }
 }

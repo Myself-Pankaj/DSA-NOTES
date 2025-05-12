@@ -78,7 +78,7 @@ class Substr{
             if(mpp.size()==k) ctr++;
           
         }
-        
+        return ctr;
     }
     string longestPalindrome(string s) {
         string res;int maxi = 0;
