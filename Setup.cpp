@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+////////////////////////////BASIC MATH//////////////////////
 #include "basicMaths/digitCounting.cpp"
 // {count_digit}
 #include "basicMaths/reverseNumber.cpp"
@@ -16,6 +18,8 @@ using namespace std;
 // {isPrime,isPrime_optimal}
 #include"recurssion/basicRecurssion.cpp"
 // {class basicRecurssion}
+
+////////////////////////////////ARRAY/////////////////////
 #include "array/basicArr.cpp"
 // {class:basicArr}
 #include"array/union.cpp"
@@ -38,6 +42,8 @@ using namespace std;
 // {class MergeInterval}
 #include "array/threesum.cpp"
 // {class ThreeSum}
+
+///////////////////////RECURSSION/////////////////////////////
 #include "recurssion/subsequence.cpp"
 // {class Recurssion}
 #include "recurssion/combinationSum.cpp"
@@ -52,12 +58,16 @@ using namespace std;
 // {class Sudoko}
 #include "recurssion/pratice.cpp"
 //{ class Pratice}
+
+/////////////////////////////////////STRING/////////////////////
 #include "string/basicString.cpp"
 //{class StringBasic}
 #include "string/substr.cpp"
 //{ class Substr}
 #include "string/hashingpb.cpp"
 //{ class StringHashing}
+
+/////////////////////////////TWO-POINTER/////////////////////////
 #include "twopointer/longestString.cpp"
 //{ class lenoflongstring}
 #include "twopointer/longsubWithkdistinct.cpp"
@@ -68,6 +78,8 @@ using namespace std;
 //{ class MaxCard}
 #include "twopointer/minwindowSubstr.cpp"
 //{class MinWindow}
+
+/////////////////////////////GREEDY////////////////////////////
 #include "greedy/assignCookie.cpp"
 //{class CookieAssigning}
 #include "greedy/lemonadeChange.cpp"
@@ -86,6 +98,8 @@ using namespace std;
 // { class validP}
 #include "greedy/candy.cpp"
 //{class DistributeCandy}
+
+///////////////////////////////////LINKLIST///////////////////////////
 #include "linklist/SLL/arraytoLL.cpp"
 //{class AtoLL}
 #include "linklist/DLL/arraytoDLL.cpp"
@@ -118,6 +132,8 @@ using namespace std;
 //{class SortLL}
 #include "linklist/SLL/reverseingroupk.cpp"
 // {class ReversingInKGroup  //tip Not completed}
+
+/////////////////////////STACK & QUEUE/////////////////////////////////
 #include "stack&queue/DS/arrtostack.cpp"
 // {class Stack}
 #include "stack&queue/DS/arrtoqueue.cpp"
@@ -164,56 +180,83 @@ using namespace std;
 // {class LRUCache}
 #include "stack&queue/LFUCache.cpp"
 // {class LFUCache}
+
+///////////////////////TREE///////////////////////////
+#include "tree/TreeFromArr.cpp"
+//{ class TreeFromArr}
+#include "tree/traversal/dfs.cpp"
+//{ class DFSTraversal}
+#include "tree/traversal/bfs.cpp"
+//{ class bfs}
+#include "tree/heightOfTree.cpp"
+//{ class heightOfTree}
+#include "tree/bottomViewOfTree.cpp"
+//{ class bottomViewOfTree}
+#include "tree/rightViewOfTree.cpp"
+//{ class rightViewOfTree}
+#include "tree/sameTree.cpp"
+//{ class sameTree}
+#include "tree/invertTree.cpp"
+//{ class invertTree}
+#include "tree/symetricTree.cpp"
+//{ class symetricTree}
+#include "tree/diameterOfTree.cpp"
+//{ class diameterOfTree}
+#include "tree/boundary.cpp"
+//{ class boundary}
+#include "tree/rootToNodePath.cpp"
+//{ class rootToNodePath}
+#include "tree/constructATree.cpp"
+//{ class constructATree}
+#include "tree/serilization.cpp"
+//{ class Codec}
+#include "tree/maxWidthOfTree.cpp"
+//{ class maxWidthOfTree}
+#include "tree/lca.cpp"
+//{ class lca}
+#include "tree/checkChildrenSum.cpp"
+//{ class checkChildrenSum}
+#include "tree/nodeAtKdistance.cpp"
+//{ class nodeAtKdistance}
+#include "tree/timeToBurnTree.cpp"
+//{ class timeToBurnTree}
+#include "tree/BST/searchinBST.cpp"
+//{ class searchinBST}
+#include "tree/BST/findMINMAX.cpp"
+//{ class findMINMAX}
+#include "tree/BST/findCeil.cpp"
+//{ class findCeil}
+#include "tree/BST/BSTiterator.cpp"
+//{ class BSTiterator}
+#include "tree/BST/insertNode.cpp"
+//{ class insertNode}
+#include "tree/BST/deleteNode.cpp"
+//{ class deleteNode}
+#include "tree/BST/recoverBST.cpp"
+//{ class recoverBST}
+#include "tree/BST/kthsmallest.cpp"
+//{ class kthsmallest}
+#include "tree/BST/validateBST.cpp"
+//{ class validateBST}
     int main() {
-        // vector<int>arr;
-        // int n;cin>>n;
-        // for (int i = 0; i < n; i++)
-        // {
-        //     /* code */
-        //     int ele;
-        //     cin>>ele;
-        //     arr.push_back(ele);
-        // }
-        LFUCache l1(2);
-        l1.put(1,1);
-        l1.put(2,2);
-        cout<<l1.get(1)<<endl;
-        l1.put(3,3);
-        cout<<l1.get(2)<<endl;
-        cout<<l1.get(3)<<endl;
-        l1.put(4,4);
-        l1.put(5,5);
-        cout<<l1.get(5)<<endl;
-        cout<<l1.get(1)<<endl;
-        cout<<l1.get(3)<<endl;
-        l1.put(6,6);
-        cout<<l1.get(5)<<endl;
-        l1.put(7,7);
-        cout<<l1.get(4)<<endl;
+        vector<int>arr;
+        int n;cin>>n;
+        for (int i = 0; i < n; i++)
+        {
+            /* code */
+            int ele;
+            cin>>ele;
+            arr.push_back(ele);  
+        }
+        TreeFromArr t1;
+
+        TreeNode* root  = t1.buildtree(arr);
+        
+        kthsmallest t2;
+        cout<< t2.kthSmallest(root,1);
+       
 
         
-
-
         
-        // int n,m;
-        // cin>>n>>m;
-        // vector<vector<int>> mat(n);
-        // for(int i = 0 ;i<n;i++){
-        //     for(int j = 0 ; j<m;j++){
-        //         int ele;
-        //         cin>>ele;
-        //         mat[i].push_back(ele);
-        //     }
-        // }
-        
-        // Celebrity c1;
-        // cout<<c1.celebrityOptimal(mat);
-    
-        // for(auto it: mat){
-        //     for(char ele:it){
-        //         cout<<ele<<" ";
-        //     }
-        //     cout<<endl;
-        // }
         return 0;
     }
