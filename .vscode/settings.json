@@ -115,6 +115,7 @@
         "map": "cpp",
         "set": "cpp",
         "new": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "iterator": "cpp"
     }
 }

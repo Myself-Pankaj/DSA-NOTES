@@ -238,25 +238,76 @@ using namespace std;
 //{ class kthsmallest}
 #include "tree/BST/validateBST.cpp"
 //{ class validateBST}
-    int main() {
-        vector<int>arr;
-        int n;cin>>n;
-        for (int i = 0; i < n; i++)
-        {
-            /* code */
-            int ele;
-            cin>>ele;
-            arr.push_back(ele);  
+
+// =================================Graph=====================================
+#include "graph/graph.cpp"
+//{class graph}
+#include "graph/traversal.cpp"
+//{class traversal}
+#include "graph/noofprovince .cpp"
+//{class noofprovince}
+#include "graph/floodfill.cpp"
+//{class floodfill}
+#include "graph/detectacycle.cpp"
+//{class detectacycle}
+#include "graph/bfsProblem.cpp"
+//{class bfsProblem}
+#include "graph/wordLadder.cpp"
+//{class wordLadder}
+#include "graph/distinctIsland.cpp"
+//{class distinctIsland}
+#include "graph/isBipartite.cpp"
+//{class isBipartite}
+#include "graph/topoSort/topoSort.cpp"
+//{class topoSort}
+#include "graph/topoSort/findSafeNode.cpp"
+//{class findSafeNode}
+
+#include "graph/ShortestPath/shortestPathinUG.cpp"
+//{class shortestPathinUG}
+#include "graph/ShortestPath/shortestPathinDAG.cpp"
+//{class shortestPathinDAG}
+#include "graph/ShortestPath/googleInterview.cpp"
+//{class googleInterview}
+#include "graph/ShortestPath/dijkstra.cpp"
+//{class dijkstra}
+#include "graph/ShortestPath/networkDelayTime.cpp"
+// {class newtorkDelayTime}
+#include "graph/ShortestPath/cheapestFlight.cpp"
+// {class cheapestFlight}
+#include "graph/ShortestPath/findTheCity.cpp"
+// {class findTheCity}
+#include "graph/ShortestPath/bellmendFord.cpp"
+// {class bellmendFord}
+     
+      
+      
+      int main() {
+        
+      // graph g1;
+      // vector<vector<pair<int,int>>>adj = g1.createWeightedGraph(false);
+
+ 
+      // g1.printWeightedGraph(adj);
+
+      
+      // findTheCity g2;
+
+      // cout<<g2.findTheNebCity(5,adj,2);
+      
+        vector<vector<int>> edges = {
+        {1, 3, 2}, 
+        {4, 3, -1},
+        {2, 4, 1}, 
+        {1, 2, 1},
+        {0, 1, 5} 
+    };
+
+        bellmendFord g1;
+        vector<int>ans = g1.bellmen(edges,0);
+
+        for(auto it: ans){
+          cout<<it<<" ";
         }
-        TreeFromArr t1;
-
-        TreeNode* root  = t1.buildtree(arr);
-        
-        kthsmallest t2;
-        cout<< t2.kthSmallest(root,1);
-       
-
-        
-        
         return 0;
     }

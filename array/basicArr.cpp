@@ -32,8 +32,8 @@ class basicArr{
         if(secondLargest == INT_MIN) return -1;
         return secondLargest;
     }
-
-    bool check(vector<int>& nums) {
+    //Rotated Sorted Array
+    bool RotatedSortedArraycheck(vector<int>& nums) {
         int n = nums.size();
         int index = 0;
         for (int i = 0; i < n; i++)
@@ -49,7 +49,7 @@ class basicArr{
         return index<=1;
         
     }
-
+    //remove duplicate in sorted array
     int removeDuplicates(vector<int>& nums) {
         int n =  nums.size();
         int j = 0;
@@ -62,8 +62,8 @@ class basicArr{
         }
         return j;
     }
-
-    void rotate(vector<int>& nums, int k) {
+    // rotate element by k position 
+    void rotateElementByKposition(vector<int>& nums, int k) {
         int n = nums.size();
         k = k%n;
             rotateHelper(nums,0,(n-k)-1);
@@ -71,7 +71,8 @@ class basicArr{
             rotateHelper(nums,0,n-1);
         
     }
-    void moveZeroes(vector<int>& nums) {
+    //move zeros to end
+    void moveZeroesToEnd(vector<int>& nums) {
         int n = nums.size();
 
         int i = 0;
@@ -82,7 +83,7 @@ class basicArr{
             }
         }
     }
-
+    //search for an element in sorted array
     bool searchInSorted(vector<int>& arr, int k) {
         int n = arr.size();
         // Your code here
@@ -94,6 +95,7 @@ class basicArr{
         }
         return index !=-1;
     }
+    // array array as -1,1,-1,1,-1,1 like this
     vector<int> rearrangeArray(vector<int>& nums) {
         int n = nums.size();
         vector<int>posArr;// 3 1 2 
@@ -119,7 +121,7 @@ class basicArr{
         int n = arr.size();
 
         vector<int>ans(n,0);
-        int pos =0,neg =1;
+        int pos =0,neg =1;// 2 3 //2 5// 
         for(int i = 0 ; i<n;i++){
             if(arr[i]>0){
                 ans[pos] = arr[i];

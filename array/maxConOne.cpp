@@ -11,11 +11,10 @@ class maxConOne{
             if(nums[i] ==1){
                 ctr++;
             }else{
-                maxOne = max(maxOne,ctr);
                 ctr = 0;
             }
+            maxOne = max(maxOne,ctr);
         }
-        maxOne = max(maxOne,ctr);
         return maxOne;
         
     }
